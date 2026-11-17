@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patchproof"
+version = "0.1.0"
+description = "Detect 9-slice borders of game UI panels, prove each detection by resynthesis, and export Unity .meta, Godot .tres and Android .9.png files."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "RakTikoo" }]
+keywords = ["gamedev", "ui", "nine-patch", "9-slice", "sprite", "unity", "godot"]
+dependencies = [
+    "Pillow>=10",
+    "numpy>=1.24",
+]
+
+[project.scripts]
+patchproof = "patchproof.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/RakTikoo/patchproof"
+
+[tool.setuptools]
+packages = ["patchproof"]
