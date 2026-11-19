@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - name: RakTikoo
+title: "patchproof: find the 9-slice borders of game UI panels, and prove each one"
+version: 0.1.0
+date-released: 2026-11-17
+license: MIT
+url: "https://github.com/RakTikoo/patchproof"
+repository-code: "https://github.com/RakTikoo/patchproof"
+abstract: >-
+  Finds the 9-slice (nine-patch) borders of every panel in a game UI kit and
+  proves each border by reconstructing the panel at other sizes, reporting
+  any panel it cannot prove as uncertain.
+keywords:
+  - 9-slice
+  - nine-patch
+  - UI
+  - game art
+  - sprites

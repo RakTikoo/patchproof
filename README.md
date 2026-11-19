@@ -6,6 +6,8 @@
 
 # patchproof — find the 9-slice borders of game UI panels, and prove each one
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/RakTikoo/patchproof)
+
 **Find the 9-slice borders of a whole folder of game UI panels, prove each one by re-rendering it, and write the engine files — or honestly say "uncertain" when a panel can't be sliced cleanly.**
 
 Unity, Godot and Unreal all *use* 9-slice borders, but none of them works the numbers out: you drag handles or type four values per panel, by hand, for every panel in a kit. patchproof does the whole kit in one run. Every detection is verified by resynthesis — the panel is re-rendered 9-sliced at several sizes (including odd sizes) and its corners must come out pixel-identical — and every panel gets a distortion score and a verdict. Panels that don't prove out are reported `UNCERTAIN` with a reason, never given made-up numbers.
@@ -50,6 +52,8 @@ With Scoop (Windows):
 scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
 scoop install patchproof
 ```
+
+**For agent users:** this repository ships a `SKILL.md` for AI agents. Install it with `npx skills add RakTikoo/patchproof`.
 
 ## Demo
 
