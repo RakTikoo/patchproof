@@ -4,13 +4,21 @@
 [![Tests](https://img.shields.io/badge/tests-17%20passing-brightgreen.svg)](#how-it-works)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/RakTikoo/patchproof/releases)
 
-# patchproof
+# patchproof — find the 9-slice borders of game UI panels, and prove each one
 
 **Find the 9-slice borders of a whole folder of game UI panels, prove each one by re-rendering it, and write the engine files — or honestly say "uncertain" when a panel can't be sliced cleanly.**
 
 Unity, Godot and Unreal all *use* 9-slice borders, but none of them works the numbers out: you drag handles or type four values per panel, by hand, for every panel in a kit. patchproof does the whole kit in one run. Every detection is verified by resynthesis — the panel is re-rendered 9-sliced at several sizes (including odd sizes) and its corners must come out pixel-identical — and every panel gets a distortion score and a verdict. Panels that don't prove out are reported `UNCERTAIN` with a reason, never given made-up numbers.
 
 ![Naive stretch (left) smears the corner rivets; the detected 9-slice (right) keeps them round](examples/demo_compare.png)
+
+## Install
+
+```
+pip install git+https://github.com/RakTikoo/patchproof
+```
+
+Python 3.10+, Pillow and numpy. Everything runs locally on CPU; no panel ever leaves your machine.
 
 ## Demo
 
@@ -35,14 +43,6 @@ For every `PROVEN` panel you get, in the output folder:
 - a **Godot `.tres`** `StyleBoxTexture` with the patch margins and content margins set,
 - an **Android `.9.png`** with the marker border drawn,
 - and `report.json` covering every panel: borders, content padding, verdict, score, sizes checked.
-
-## Install
-
-```
-pip install git+https://github.com/RakTikoo/patchproof
-```
-
-Python 3.10+, Pillow and numpy. Everything runs locally on CPU; no panel ever leaves your machine.
 
 ## Usage
 
