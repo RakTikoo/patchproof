@@ -54,6 +54,10 @@ patchproof scan <file-or-folder> --out <dir> [--threshold 6.0]
 - Content padding (transparent margins around the panel) is detected and reported separately from the borders, and lands in the Godot content margins and the `.9.png` content box.
 - `--threshold` sets how clean a slice must be to earn `PROVEN` (lower = stricter).
 
+## Use with an AI agent
+
+This repo ships a [SKILL.md](SKILL.md) written to the Agent Skills open standard. If your coding agent supports skills, point it at this repo and it can install patchproof, run it on your panel PNGs, and read the per-panel verdicts for you. The skill works when the repo is cloned under its real name (`patchproof`) — a skill's name must match its folder.
+
 ## How it works
 
 1. **Stretchability profile.** A column can sit in the stretched centre if the image is locally *linear* along x there — flat fills and smooth gradients stretch losslessly, ornaments don't. Second-difference profiles give a first guess at the borders.
