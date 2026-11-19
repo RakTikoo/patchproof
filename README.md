@@ -20,6 +20,37 @@ pip install git+https://github.com/RakTikoo/patchproof
 
 Python 3.10+, Pillow and numpy. Everything runs locally on CPU; no panel ever leaves your machine.
 
+Or from the release files (no registry involved): download
+`patchproof-0.1.0-py3-none-any.whl` from the
+[v0.1.0 release](https://github.com/RakTikoo/patchproof/releases/tag/v0.1.0)
+(check it against the release's SHA256SUMS if you want) and install it:
+
+```
+pip install patchproof-0.1.0-py3-none-any.whl
+```
+
+Or install straight from GitHub at the v0.1.0 tag:
+
+```
+pip install git+https://github.com/RakTikoo/patchproof@v0.1.0
+pipx install git+https://github.com/RakTikoo/patchproof@v0.1.0
+uv tool install git+https://github.com/RakTikoo/patchproof@v0.1.0
+```
+
+With Homebrew (macOS/Linux):
+
+```
+brew tap RakTikoo/tools
+brew install RakTikoo/tools/patchproof
+```
+
+With Scoop (Windows):
+
+```powershell
+scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
+scoop install patchproof
+```
+
 ## Demo
 
 ```
